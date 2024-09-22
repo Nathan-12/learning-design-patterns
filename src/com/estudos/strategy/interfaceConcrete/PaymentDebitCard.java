@@ -15,4 +15,9 @@ public class PaymentDebitCard implements PaymentStrategy {
         System.out.println("Debit card payment: " + result.add(value) + ".\n"
                 + "Tax aplication: " + debitTax + ".\n");
     }
+
+    @Override
+    public void refund(BigDecimal value) {
+        System.out.println("Debit card payment refund: " + value + ".");
+    }
 }

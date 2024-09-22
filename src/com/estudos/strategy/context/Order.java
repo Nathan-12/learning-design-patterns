@@ -15,4 +15,8 @@ public class Order {
     public void processPayment(PaymentStrategy paymentStrategy) {
         paymentStrategy.pay(value);
     }
+
+    public void refundPayment(PaymentStrategy paymentStrategy) {
+        paymentStrategy.refund(value);
+    }
 }

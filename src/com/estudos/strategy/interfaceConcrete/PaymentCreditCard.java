@@ -15,4 +15,10 @@ public class PaymentCreditCard implements PaymentStrategy {
         System.out.println("Credit card payment: " + result.add(value) + ".\n"
         + "Tax aplication: " + creditTax + ".\n");
     }
+
+    @Override
+    public void refund(BigDecimal value) {
+        BigDecimal creditTax = new BigDecimal("0.03");
+        System.out.println("Credit card payment refund: " + value + ".");
+    }
 }
